@@ -1,0 +1,82 @@
+<section>
+  <div class="box container">
+     <div class="row p-4">
+      <div class="col-4 weather-box">
+        <img src="../../assets/images/Sun 3d PNG, Sun And Cloud 3d Summer, Sun And Cloud, 3d, Summer PNG Image For Free Download (1).png" class="icon1">
+        <br>
+        <p class=" mb-3 text-start">{{currentDateTime}}</p>
+        <h2 class="mb-2 text-center">Cairo, Egypt{{weatherdata?.location?.name}}</h2>
+        <h6 class="text-center">Chance of Rain 25%~30%</h6>
+        <h1 class="text-center">30&deg;</h1>
+        <h6 class="text-center">Seems Like: 33&deg;</h6>
+        <div class="d-flex justify-content-evenly data">
+            <div>
+              <img src="../../assets/images/Cloudy free vector icons designed by Freepik.png" class="icon2 mb-3">
+              <h5 class="text-center">75</h5>
+            </div>
+            <div>
+              <img src="../../assets/images/Weather free icons designed by Good Ware.png" class="icon2 mb-3">
+              <h5 class="text-center">65</h5>
+            </div>
+            <div>
+              <img src="../../assets/images/Wind turbine Customizable Cartoon Illustrations _ Bro Style.png" class="icon2 mb-3">
+              <h5 class="text-center">20</h5>
+            </div>
+        </div>
+      </div>
+    <!----------------WITH API-------------------
+      <div *ngFor="let item of wetherdata.items">
+      <h2 class="mb-3">Tuesday</h2>
+      <h6 class="mb-4">{{item.date}}</h6>
+      <img src="../../assets/images/Cloudy free vector icons designed by Freepik.png" class="icon mb-4">
+      <h5 class="mb-3">{{item.temprature}} &deg;C</h5>
+      <h4 *ngIf="item.rain&& item.cloudy">RAINSTORM</h4>
+      <h5 class="mb-3">{{item.wind}} km/h</h5>
+      <BUTton class="btn" *ngIf="item.rain">Rainy</BUTton>
+    </div>
+     -->
+    <!----------------IN CASE OF THERE IS NO API----------------->
+      <div class="col-2 sec text-muted">
+        <h2 class="mb-3">Tuesday</h2>
+        <h6 class="mb-4">18 july</h6>
+        <img src="../../assets/images/Cloudy free vector icons designed by Freepik.png" class="icon mb-4">
+        <h5 class="mb-3">14~18 &deg;C</h5>
+        <h4>RAINSTORM</h4>
+        <h5 class="mb-3">Wind: <8km/h</h5>
+        <BUTton class="btn">Rainy</BUTton>
+      </div>
+      <div class="col-2 sec text-muted">
+        <h2 class="mb-3">Wednesday</h2>
+        <h6 class="mb-4">19 july</h6>
+        <img src="../../assets/images/Sun 3d Transparent PNG, Cute Sun 3d Summer, Sun, 3d, Summer PNG Image For Free Download.png" class="icon mb-4">
+        <h5 class="mb-3">24~27 &deg;C</h5>
+        <h4>SUNSHINE</h4>
+        <h5 class="mb-3">Wind: <10km/h</h5>
+        <BUTton class="btn btn-primary">Sunny</BUTton>
+      </div>
+      <div class="col-2 sec text-muted">
+        <h2 class="mb-3">Thursday</h2>
+        <h6 class="mb-4">20 july</h6>
+        <img src="../../assets/images/Cloudy free vector icons designed by Freepik.png" class="icon mb-4">
+        <h5 class="mb-3">17~22 &deg;C</h5>
+        <h4>CLOUDYNESS</h4>
+        <h5 class="mb-3">Wind: <9km/h</h5>
+        <BUTton class="btn btn-primary">CLOUDY</BUTton>
+      </div>
+      <div class="col-2 sec text-muted">
+        <h2 class="mb-3">Friday</h2>
+        <h6 class="mb-4">21 july</h6>
+        <img src="../../assets/images/Sun 3d Transparent PNG, Cute Sun 3d Summer, Sun, 3d, Summer PNG Image For Free Download.png" class="icon mb-4">
+        <h5 class="mb-3">28~33 &deg;C</h5>
+        <h4>DUST STORM</h4>
+        <h5 class="mb-3">Wind: <9km/h</h5>
+        <BUTton class="btn btn-primary">Sunny</BUTton>
+      </div>
+    <!------------------------------------------------>
+    <div class="info">
+      <p>HAVE A GOOD DAY <span class="h1">&#x263A;</span></p>
+    </div>
+     </div>
+  </div>
+
+</section>
